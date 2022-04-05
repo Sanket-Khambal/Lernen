@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Lernen</title>
+</head>
+<body>
+    <div class="show">
+        <nav>
+            <h1><a href="/">Lernen</a></h1>
+            <ul>
+                <% if (user) { %>
+                    <li class="welc">Welcome,<%= user.username %>!</li>
+                    <li><a href="/logout">Log out</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/<%= user._id %>">profile</a></li>
+                <% } else { %>
+                    <li><a href="/login">Log in</a></li>
+                    <li><a href="/signup" class="btn">Sign up</a></li>
+                <% } %>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="info"><h4>Click on the fields you want to edit and then the update button to edit your profile,type the same data in the fields you want to keep the same</h4></div>
+    <div class="details-content">
+        <div class="profile-img">
+            <img src="data:image/<%=user.img.contentType%>;base64,
+        <%=user.img.data.toString('base64')%>">
+        </div>
+        <div class="edit">
+            <form action="/profile/<%=user._id %>" method="POST">
+                <h2> Profile </h2>
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="<%=user.username %>" required />
+                <div class="username error"></div>
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="<%=user.email %>"required />
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="<%=user.password %>" required />
+                <button> Update </button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const a = document.getElementsByTagName('a')
+    Array.from(a).forEach(function(e){
+        e.style.color = 'black'
+    })
+
+    const welc = document.querySelector('.welc')
+    welc.style.color = '#bdbdbc'
+
+    /*const updoot = document.querySelector('button.update');
+
+    updoot.addEventListener('click',(e)=>{
+      const end = `/profile/${updoot.dataset.doc}`;
+      fetch(end,{
+        method:'PUT',
+      })
+      .then(response=>response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    })*/
+</script>
+</html>

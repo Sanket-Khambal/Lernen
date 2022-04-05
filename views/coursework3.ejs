@@ -1,0 +1,52 @@
+<%- include('partials/header'); -%>
+
+
+<section>
+    <div>
+        <h2>Task 3</h2>
+        <p>Building projects is an important to improve your skills.The following video provides you with some project ideas,so select any idea you wnat and start building your project</p>
+    </div>
+    <div class="video"><iframe width="760" height="515" src="https://www.youtube.com/embed/8ext9G7xspg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div>
+        <ul>
+            <li><a href="#" class="button">Mark as complete</a></li>
+            <li><a href="/" class="button">Next</a></li>
+        </ul>
+    </div>
+</section>
+
+
+<footer>
+    <h3>Contact</h3>
+    <ul class="social">
+        <li><a href="https://www.facebook.com/sanket.khambal/" target="blank"><img src= "icons8-facebook-48.png" ></a></li>
+        <li><a href="https://www.instagram.com/khambalsanket/" target="blank"><img src ="icons8-instagram-48.png"></a></li>
+        <li><a href="https://twitter.com/Sanket29077088" target="blank"><img src ="icons8-twitter-48.png"></a></li>
+    </ul>
+</footer>
+    
+</body>
+<script>
+    const footer = document.querySelector('footer');
+    footer.style.position = 'absolute'
+    footer.style.bottom = '-200px'
+
+    const showcase = document.querySelector('.showcase')
+    showcase.style.background = 'none'
+    const styleElem = document.head.appendChild(document.createElement("style"))
+    styleElem.innerHTML = ".showcase::after{background:white;box-shadow:none}"
+
+    const a = document.getElementsByTagName('a')
+    Array.from(a).forEach(function(e){
+        e.style.color = 'black'
+    })
+
+    const welc = document.querySelector('.welc')
+    welc.style.color = '#bdbdbc'
+
+    var button = document.querySelector('.complete')
+    button.onclick = function(){
+        button.textContent = 'Completed'
+    }
+</script>
+</html>

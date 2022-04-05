@@ -1,0 +1,30 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <div class="main">
+    <h1><a href="/">Lernen</a></h1>
+    <a href="/logout">Log out</a>
+  </div>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="tasks content">
+    <h2>All Tasks</h2>
+
+    <% if (tasks.length > 0) { %>
+      <% tasks.forEach(task => { %>
+        <a class="single" href="/tasks/<%= task._id %>">
+          <h3 class="description">Description: <%= task.description %></h3>
+          <p class="completed">Completed: <%= task.completed %></p>
+          <p>Deadline:<%= task.deadline %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no tasks to display...</p>
+    <% } %>
+    
+  </div>
+
+  
+</body>
+</html>

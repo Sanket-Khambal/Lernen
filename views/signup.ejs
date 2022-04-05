@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Lernen</title>
+</head>
+<body>
+    <div class="showcase">
+        <nav>
+          <h1><a href="/">Lernen</a></h1>
+          <ul>
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/signup" class="btn">Sign up</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+
+<form action="/signup" method="POST"  enctype="multipart/form-data">
+  <h2>Sign Up</h2>
+  <label for="username">Username</label>
+  <input type="text" name="username" required>
+  <div class="username error"></div>
+  <label for="email">Email</label>
+  <input type="text" name="email" required />
+  <% if(errors){ %>
+    <div class="email error"><%= errors.email %></div>
+  <% } %>
+  <label for="password">Password</label>
+  <input type="password" name="password" required />
+  <% if(errors){ %>
+    <div class="password error"><%=errors.password %></div>
+  <% } %>
+  <label for="image">Upload a profile photo:</label>
+  <input type="file" id="image" name="image" required  />
+  <button>Sign Up</button>
+</form>
+
+<footer>
+    <h3>Contact</h3>
+    <ul class="social">
+        <li><a href="https://www.facebook.com/sanket.khambal/" target="blank"><img src= "icons8-facebook-48.png" ></a></li>
+        <li><a href="https://www.instagram.com/khambalsanket/" target="blank"><img src ="icons8-instagram-48.png"></a></li>
+        <li><a href="https://twitter.com/Sanket29077088" target="blank"><img src ="icons8-twitter-48.png"></a></li>
+    </ul>
+</footer>
+
+<script>
+  const footer = document.querySelector('footer');
+  footer.style.bottom = '-200px'
+
+  
+</script>
+</body>
+</html>
