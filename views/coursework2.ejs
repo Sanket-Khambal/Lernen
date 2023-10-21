@@ -6,7 +6,7 @@
         <h2>Task 2</h2>
         <p>With the setup now done,let's dive in. Watch the following video which will help you to understand all the basics of python.This video is a perfect mix of theory and practice, packed with real-world examples, exercises and step-by-step solutions</p>
     </div>
-    <div class="video"><iframe width="760" height="515" src="https://www.youtube.com/embed/_uQrJ0TkZlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div>
         <ul>
             <li><a href="#" class="button">Mark as complete</a></li>
@@ -29,7 +29,15 @@
 <script>
     const footer = document.querySelector('footer');
     footer.style.position = 'absolute'
-    footer.style.bottom = '-200px'
+    if (window.innerWidth >= 1300) {
+      footer.style.bottom = '-350px';
+    }
+    if(window.innerWidth <= 440){
+        footer.style.bottom = '0px';
+    }
+    else{
+        footer.style.bottom = '-200px' ;
+    }
 
     const showcase = document.querySelector('.showcase')
     showcase.style.background = 'none'

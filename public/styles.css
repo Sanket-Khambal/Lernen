@@ -13,7 +13,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     position: relative;
 }
 .showcase::after{
@@ -96,11 +96,11 @@ nav li a{
     margin: 20px 40px;
     width: 70%;
     justify-content: center;
-    padding-left: 280px;
+    padding-left: 230px;
     margin-bottom: 50px;
 }
 .cards li{
-    width: 400px;
+    width: 35%;
     margin-right: 50px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -125,6 +125,23 @@ form h2{
     margin-bottom: 40px;
 }
 form{
+    width: 360px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+    left: 40%;
+    bottom: 20%;
+    z-index: 4;
+}
+.login_form h2{
+    font-size: 2.4em;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+.login_form{
     width: 360px;
     margin: 0 auto;
     padding: 30px;
@@ -249,7 +266,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
 
     z-index: 4;
 }
@@ -275,7 +292,10 @@ section ul{
 }
 .video{
     margin: 50px 0px;
+    width: 760px;
+    height: 515px;
 }
+
 .show{
     width: 100%;
 }
@@ -311,4 +331,167 @@ section ul{
     left: 13%;
     z-index: 4;
     color: #ffdd53;
+}
+
+@media screen and (min-width: 1341px) {
+    .showcase {
+        height: 940px;
+    }
+    form{
+        bottom: 7%;
+    }
+    .login_form{
+        bottom: 20%;
+    }
+    .container{
+        bottom: 180px;
+        right: 500px;
+    }
+    footer{
+        bottom: -980px;
+    }
+}
+
+@media(max-width:440px){
+    body{
+        height: 1010px;
+    }
+    .showcase{
+        height: 750px;
+    }
+    .showcase h1,ul{
+        font-size: 0.6em;
+    }
+    .cards{
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+    .container-two{
+        margin: 20px 20px;
+    }
+    .container-two li{
+        font-size: 0.5em;
+    }
+    .container-two h2{
+        font-size:1em ;
+    }
+    .container{
+        right: 55px;
+        bottom: 480px;
+    }
+    .container h2{
+        font-size: 1em;
+    }
+    .container h3{
+        font-size: 0.8em;
+    }
+    .container h4{
+        font-size: 0.6em;
+    }
+    footer{
+        bottom: 0px;
+        font-size: 0.6em;
+    }
+    footer h3{
+        margin-left: 25px;
+        padding-top: 15px;
+    }
+    .showcase::after{
+        height: 100%;
+    }
+    .showcase nav ul{
+        margin: 8px 16px;
+    }
+    .showcase nav li{
+        margin-left: 10px;
+    }
+    .showcase nav li a{
+        padding: 4px 6px;
+    }
+    .container a{
+        font-size: 0.6em;
+    }
+    .details-content{
+        width: 70%;
+        margin: 50px 50px ;
+        margin-left: 30px;
+    }
+    .details-content img{
+        width: 60px;
+        height: 60px;
+        margin-top: 30px;
+    }
+    .video{
+        align-self: start;
+        width: 80px;
+        height: 145px;
+        margin: 25px 0px;
+        margin-left: 29px;
+        
+    }
+    
+    section{
+        margin: 15px 15px;
+        top: 80px;
+        
+    }
+    section h2{
+        font-size: 0.8em;
+    }
+    section p{
+        font-size: 0.6em;
+    }
+    section ul{
+        width: 350px;
+    }
+    form{
+        width: 150px;
+        margin: 0 0;
+        left: 90px;
+    }
+    form h2,input{
+        font-size: 0.8em;
+    }
+    form label{
+        font-size: 0.6em;
+    }
+    form button{
+        font-size: 0.6em;
+    }
+
+    .login_form{
+        width: 150px;
+        margin: 0 0;
+        left: 90px;
+        top: 200px;
+        height: 300px;
+    }
+    .login_form h2,input{
+        font-size: 0.8em;
+    }
+    .login_form label{
+        font-size: 0.6em;
+    }
+    .login_form button{
+        font-size: 0.6em;
+    }
+    .show ul{
+        margin: 20px 0;
+    }
+    .show li{
+        margin-left: 0px;
+    }
+    .show li a{
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 0.8em;
+    }
+    .show h1{
+        font-size: 0.8em;
+    }
+    .info{
+        font-size: 0.6em;
+        left: 15px;
+    }
+    
 }

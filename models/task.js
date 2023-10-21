@@ -13,7 +13,7 @@ const taskSchema = new Schema({
     deadline:{
         type:Date,
         required:true,
-        default:new Date('2022-04-14')
+        default:new Date('2023-08-10')
     }
 });
 

@@ -6,9 +6,9 @@
         <h2>Task 1</h2>
         <p>Python is a high-level, general-purpose programming language. Before diving into the course, let's start by understanding why is it beneficial to learn python and its uses.</p>
     </div>
-    <div class="video"><iframe width="760" height="515" src="https://www.youtube.com/embed/Ozrduu2W9B8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video"><iframe  src="https://www.youtube.com/embed/Ozrduu2W9B8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <p>Now let's start by setting up python on your device, the following video will help you with the python setup</p>
-    <div class="video"><iframe width="760" height="515" src="https://www.youtube.com/embed/SbQAAuom-GA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video"><iframe  src="https://www.youtube.com/embed/SbQAAuom-GA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div>
         <ul>
             <li><a href="#" class="button">Mark as complete</a></li>
@@ -31,7 +31,15 @@
 <script>
     const footer = document.querySelector('footer');
     footer.style.position = 'absolute'
-    footer.style.bottom = '-780px'
+    if (window.innerWidth >= 1300) {
+      footer.style.bottom = '-980px';
+    }
+    if(window.innerWidth <= 440){
+        footer.style.bottom = '0px';
+    }
+    else{
+        footer.style.bottom = '-780px' ;
+    }
 
     const showcase = document.querySelector('.showcase')
     showcase.style.background = 'none'

@@ -6,11 +6,11 @@
         <h2>Task 3</h2>
         <p>Building projects is an important to improve your skills.The following video provides you with some project ideas,so select any idea you wnat and start building your project</p>
     </div>
-    <div class="video"><iframe width="760" height="515" src="https://www.youtube.com/embed/8ext9G7xspg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video"><iframe  src="https://www.youtube.com/embed/8ext9G7xspg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div>
         <ul>
             <li><a href="#" class="button">Mark as complete</a></li>
-            <li><a href="/" class="button">Next</a></li>
+            <li><a href="/" class="button">Home</a></li>
         </ul>
     </div>
 </section>
@@ -29,8 +29,15 @@
 <script>
     const footer = document.querySelector('footer');
     footer.style.position = 'absolute'
-    footer.style.bottom = '-200px'
-
+    if (window.innerWidth >= 1300) {
+      footer.style.bottom = '-350px';
+    }
+    if(window.innerWidth <= 440){
+        footer.style.bottom = '0px';
+    }
+    else{
+        footer.style.bottom = '-200px' ;
+    }
     const showcase = document.querySelector('.showcase')
     showcase.style.background = 'none'
     const styleElem = document.head.appendChild(document.createElement("style"))
